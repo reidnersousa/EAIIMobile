@@ -11,6 +11,7 @@ rotas.get('/perfil', (req, res) => {
   res.json('Perfil do usuário');
 });
 
+
 rotas.post('/cadastro', (req, res) => {
   // Lógica para cadastrar um usuário
 });
