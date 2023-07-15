@@ -1,14 +1,16 @@
-class User {
-  constructor(nome, email, senha) {
-    this.nome = nome;
-    this.email = email;
-    this.senha = senha;
-  }
+// User.js
 
-  salvar() {
-    // Lógica para salvar o usuário em algum lugar (por exemplo, banco de dados)
-    console.log('Usuário salvo:', this);
-  }
-}
 
-module.exports = User;
+
+
+const mongoose = require('mongoose');
+
+const UserSchema = new mongoose.Schema(
+  {
+    nome: String,
+    email: String,
+    senha: String
+  }
+);
+
+module.exports = mongoose.model('User', UserSchema);

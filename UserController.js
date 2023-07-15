@@ -1,18 +1,11 @@
 //UserController.js
+const User = require('./User');
 
-const express = require('express');
-const rotas = express.Router();
+function cadastrarUsuario(req, res) {
+  res.json("CadastrarUsuario foi chamado");
+}
 
-rotas.get('/', (req, res) => {
-  res.json('Olá mundo na rota de usuários');
-});
+module.exports = {
+  cadastrarUsuario
+};
 
-rotas.get('/perfil', (req, res) => {
-  res.json('Perfil do usuário');
-});
-
-rotas.post('/cadastro', (req, res) => {
-  // Lógica para cadastrar um usuário
-});
-
-module.exports = rotas;

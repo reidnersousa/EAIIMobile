@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const userRouter = require('./UserController');
+const userRouter = require('./UserRouter');
 app.use('/users', userRouter);
 
 const port = 3000;
