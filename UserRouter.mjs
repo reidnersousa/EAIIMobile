@@ -1,6 +1,6 @@
 //UserRouter.js
-
 const User = require('./User');
+
 
 
 const UserController = require('./UserController');
@@ -15,17 +15,14 @@ rotas.get('/', (req, res) => {
 });
 
 rotas.get('/lista', UserController.show);
+rotas.get('/perfil', UserController.perfilUsuario); //ok
 
-rotas.get('/perfil/:id', UserController.perfilUsuario);
-
-
-
-rotas.put('/:id', UserController.update); // não consigo atualizar o que eesta na banco e retorna valor antigo  
-rotas.delete('/:id', UserController.destroy); // usando delete eu apago o que esta no banco 
+rotas.put('/:id', UserController.update);
+rotas.delete('/:id', UserController.destroy); // ok
 
 
 rotas.get('/carrinho', UserController.carrinhoUsuario); //ok
-rotas.post('/cadastro', UserController.cadastrarUsuario);  // arruma o metodo apresenta erro ao inserir nome email e senha
+rotas.post('/cadastro', UserController.cadastrarUsuario);  // arruma o metodo apresenta erro ao inserir nome  
 rotas.post('/login', UserController.loginUsuario);  //ok
 
 module.exports = rotas;
