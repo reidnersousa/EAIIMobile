@@ -60,6 +60,7 @@ async function loginUsuario(req, res) {
   const userPasswordBody = req.body.password;
   try {
     const user = await User.findOne({ email: userEmailBody, password: userPasswordBody });
+    
     if (!user) {
       return res.status(404).json({ message: 'Email ou Usuario invalido ' });
     }

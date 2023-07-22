@@ -40,6 +40,8 @@ rotas.post('/cadastro/:', UserController.criarUsuario);  // ok
 // https://eaiimobile.reidnersantos.repl.co/users/login/User2IFB@gmail.com
 rotas.post('/login/:email/:password', UserController.loginUsuario);  // ok 
 
+rotas.post('/login', UserController.loginUsuario);  // ok 
+
 // não sei pq mas da erro aqui a unica diferença e teste/:
 // rotas.post('/teste', UserController.cadastrarUsuario);  // ok 
 
